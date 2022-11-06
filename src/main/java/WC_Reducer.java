@@ -12,7 +12,7 @@ public class WC_Reducer  extends MapReduceBase implements Reducer<Text,IntWritab
                        Reporter reporter) throws IOException {
         int sum=0;
         while (values.hasNext()) {
-            values.next().get();
+            sum+=values.next().get();
         }
         output.collect(key,new IntWritable(sum));
     }

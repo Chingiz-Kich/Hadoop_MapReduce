@@ -12,7 +12,7 @@ import org.apache.hadoop.mapred.TextOutputFormat;
 public class WC_Runner {
     public static void main(String[] args) throws IOException{
         JobConf conf = new JobConf(WC_Runner.class);
-        conf.setJobName("WordCount");
+        conf.setJobName("CharCount");
         conf.setOutputKeyClass(Text.class);
         conf.setOutputValueClass(IntWritable.class);
         conf.setMapperClass(WC_Mapper.class);
